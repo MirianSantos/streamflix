@@ -1,7 +1,8 @@
 $('.owl-carousel').owlCarousel({
-    loop:false,
+    loop:true,
     margin:10,
     nav:false,
+    autoplay:true,
     responsive:{
         0:{
             items:1
@@ -24,6 +25,13 @@ function unmute() {
     } else {
         video.muted = true;
         $('#icone-som').removeClass("fa-solid fa-volume-high");
-        $('#icone-som').addClass("fa-solid fa-volume-xmark");
+        $('#icone-som').addClass("fa-solid fa-volume-high");
     }
+}
+
+function replay(){
+    var video = document.getElementById('trailer1');
+    video.currentTime = 0;
+    video.play();
+
 }

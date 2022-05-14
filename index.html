@@ -19,7 +19,7 @@
     <header>
         <div class="container">
             <h2 class="logo">STREAMFLIX</h2>
-            <nav>
+            <nav class="header-nav">
                 <a href="#">Início</a>
                 <a href="#">Séries</a>
                 <a href="#">Filmes</a>
@@ -32,20 +32,22 @@
     <main>
         <div class="filme-principal">
             <div class="container">
-                <h3 class="titulo">DESIGNETED SURVIVOR</h3> 
-                <video autoplay poster="img/capa.jpeg" class="trailler-video">
-                <source src="videos/TraillerDesignated.mp4" type="video/mp4">
-                </video>
+                <div class="box-titulo-trailer">
+                    <h3 class="titulo"><br/><br/>DESIGNETED SURVIVOR</h3> 
+                    <video id="trailer1" playsinline autoplay muted poster class="trailer-video">
+                        <source src="videos/designated.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="botoes">
                     <button role="button" class="botao">
                         <i class="fa-solid fa-play"></i>
-                        ASSISTIR AGORA
+                        <div>ASSISTIR AGORA</div>
                     </button>
                     <button role="button" class="botao">
                         <i class="fa-solid fa-circle-info"></i>
-                        MAIS INFORMAÇÕES
+                        <div>MAIS INFORMAÇÕES</div>
                     </button>
-                    <button role="button" class="botao">
+                    <button onclick="replay()" role="button" class="botao">
                         <i class="fa-solid fa-arrow-rotate-left"></i>
                     </button>
                     <button onclick="unmute()" role="button" class="botao">
@@ -56,9 +58,7 @@
         </div>
     </main> 
 
-    <video id="trailer1" playsinline autoplay muted loop poster="img/capa.jpeg" class="trailler-video">
-        <source src="videos/TraillerDesignated.mp4" type="video/mp4">
-    </video>
+    
 
     <div class="carrosel-filmes">
         <div class="owl-carousel owl-theme">
