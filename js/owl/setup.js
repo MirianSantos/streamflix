@@ -1,4 +1,4 @@
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel').owlCarousel( {
     loop:true,
     margin:10,
     nav:false,
@@ -29,7 +29,7 @@ function unmute() {
     }
 }
 
-function replay(){
+function replay() {
     var video = document.getElementById('trailer1');
     video.currentTime = 0;
     video.play();
